@@ -1,6 +1,7 @@
 package com.example.demo;
 
 import com.google.gson.annotations.Expose;
+import javafx.scene.control.Spinner;
 
 public class Players {
     private int id;
@@ -11,7 +12,7 @@ public class Players {
     @Expose
     private int age;
     @Expose
-    private boolean score;
+    private Spinner<Boolean> score;
 
     public Players(int id, String name, String location, int age, String score) {
         this.id = id;
@@ -53,11 +54,11 @@ public class Players {
         this.age = age;
     }
 
-    public boolean isScore() {
+    public Spinner<Boolean> getScore() {
         return score;
     }
 
-    public void setScore(boolean score) {
+    public void setScore(Spinner<Boolean> score) {
         this.score = score;
     }
 }
